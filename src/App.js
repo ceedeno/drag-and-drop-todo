@@ -5,27 +5,8 @@ import Form from "react-bootstrap/Form";
 import ListGroup from "react-bootstrap/ListGroup";
 import {DragDropContext, Droppable} from "react-beautiful-dnd";
 import Todo from "./components/todo";
+import NewTodo from "./components/newTodo";
 
-function NewTodo(props) {
-    return (
-        <div>
-            <Form onSubmit={(event) => {
-                props.onNewTodo(event);
-                event.preventDefault()
-            }}>
-                <Form.Group controlId="title">
-                    <Form.Control required type="text" placeholder="Title"/>
-                </Form.Group>
-                <Form.Group controlId="description">
-                    <Form.Control required as="textarea" placeholder="Description"/>
-                </Form.Group>
-                <Button variant="success" type="submit">
-                    Add To do
-                </Button>
-            </Form>
-        </div>
-    )
-}
 
 function genTodo(title, description, id = Math.random().toString()) {
     return ({title, description, id})
