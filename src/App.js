@@ -46,7 +46,7 @@ function NewTodo(props) {
                 <Form.Group controlId="description">
                     <Form.Control required as="textarea" placeholder="Description"/>
                 </Form.Group>
-                <Button variant="success" type="submit" block>
+                <Button variant="success" type="submit">
                     Add To do
                 </Button>
             </Form>
@@ -114,7 +114,7 @@ function TodoList({onRemoveList, name, MyListId, myIndex, todos}) {
                         </ListGroup>
                     )}
                 </Droppable>
-                {!addClicked && <Button variant="success" onClick={() => setAddClicked(true)} block>Add To Do</Button>}
+                {!addClicked && <Button variant="success" onClick={() => setAddClicked(true)}>Add To Do</Button>}
                 {addClicked && <NewTodo onNewTodo={handleNewTodo}/>}
             </Card.Body>
         </Card>
@@ -130,7 +130,7 @@ function NewList(props) {
             <Form.Group controlId="name">
                 <Form.Control required type="text" placeholder="Name"/>
             </Form.Group>
-            <Button variant="success" type="submit" block>
+            <Button variant="success" type="submit">
                 Create List
             </Button>
         </Form>
@@ -235,7 +235,6 @@ function App() {
                         <Button
                             variant="success"
                             onClick={() => setAddListClicked(true)}
-                            block
                         >Add List</Button>
                     </div>}
                     {addListClicked && <NewList onNewList={handleNewList}/>}
