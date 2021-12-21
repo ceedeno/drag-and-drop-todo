@@ -1,33 +1,12 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
 import {Button, Container} from "react-bootstrap";
-import Form from "react-bootstrap/Form";
 import {DragDropContext} from "react-beautiful-dnd";
 import AppContext from "./context/appContext";
 import TodoList from "./components/todoList";
+import NewList from "./components/newList";
+import {genList} from "./utils/generators";
 
-
-function NewList(props) {
-    return (
-        <Form onSubmit={(event) => {
-            props.onNewList(event);
-            event.preventDefault()
-        }}>
-            <Form.Group controlId="name">
-                <Form.Control required type="text" placeholder="Name"/>
-            </Form.Group>
-            <Button variant="success" type="submit">
-                Create List
-            </Button>
-        </Form>
-    )
-
-}
-
-function genList(name, id = Math.random().toString()) {
-    const todos = []
-    return ({name, id, todos})
-}
 
 function App() {
     const [lists, setLists] = useState([]);

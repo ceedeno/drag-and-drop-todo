@@ -5,10 +5,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Todo from "./todo";
 import NewTodo from "./newTodo";
 import AppContext from "../context/appContext";
-
-function genTodo(title, description, id = Math.random().toString()) {
-    return ({title, description, id})
-}
+import {genTodo} from "../utils/generators";
 
 function TodoList({onRemoveList, name, MyListId, myIndex, todos}) {
     const [addClicked, setAddClicked] = useState(false);
