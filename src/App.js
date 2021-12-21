@@ -6,10 +6,11 @@ import AppContext from "./context/appContext";
 import TodoList from "./components/todoList";
 import NewList from "./components/newList";
 import {genList} from "./utils/generators";
+import listsDemo from "./constants/demo";
 
 
 function App() {
-    const [lists, setLists] = useState([]);
+    const [lists, setLists] = useState(listsDemo);
     const [addListClicked, setAddListClicked] = useState(false);
 
     useEffect(() => {
