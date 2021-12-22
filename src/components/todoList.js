@@ -6,6 +6,8 @@ import Todo from "./todo";
 import NewTodo from "./newTodo";
 import AppContext from "../context/appContext";
 import {genTodo} from "../utils/generators";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faList, faPlus, faTrash} from "@fortawesome/free-solid-svg-icons";
 
 function TodoList({onRemoveList, name, MyListId, myIndex, todos}) {
     const [addClicked, setAddClicked] = useState(false);
@@ -39,8 +41,16 @@ function TodoList({onRemoveList, name, MyListId, myIndex, todos}) {
 
     return (
         <Card>
-            <Card.Header id={"flex-card-todolist-header"}>{name}
-                <Button variant="danger" onClick={onRemoveList}>Remove</Button>
+            <Card.Header>
+                <div id={"card-header-content-div"}>
+                    <div className="card-header-title font-size-lg text-capitalize font-weight-normal">
+                        <FontAwesomeIcon icon={faList}/>
+                        &nbsp;{name}
+                    </div>
+                    <button className={"border-0 btn-transition btn btn-outline-danger"} onClick={onRemoveList}>
+                        <FontAwesomeIcon icon={faTrash}/>
+                    </button>
+                </div>
             </Card.Header>
             <Card.Body>
                 <Droppable droppableId={MyListId.toString()}>
@@ -63,9 +73,15 @@ function TodoList({onRemoveList, name, MyListId, myIndex, todos}) {
                         </ListGroup>
                     )}
                 </Droppable>
-                {!addClicked && <Button variant="success" onClick={() => setAddClicked(true)}>Add To Do</Button>}
                 {addClicked && <NewTodo onNewTodo={handleNewTodo}/>}
             </Card.Body>
+            <Card.Footer>
+                <div className={"d-flex justify-content-center"}>
+                    {!addClicked && <Button variant="success" onClick={() => setAddClicked(true)}>
+                        <FontAwesomeIcon icon={faPlus}/>
+                    </Button>}
+                </div>
+            </Card.Footer>
         </Card>
     );
 }

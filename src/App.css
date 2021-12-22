@@ -5,7 +5,7 @@
   margin-top: 2px;
   margin-bottom: 2px;
   border-color: #cccccc;
-  background-color: white;
+  background-color: #f7f7f7;
 }
 
 .todo-container:active{
@@ -16,7 +16,7 @@
 
 .todo-container:hover{
   transition: all 0.4s ease-out;
-  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  box-shadow: 0 1px 2px rgba(38, 38, 38, 0.2);
   top: -2px;
   background-color: white;
 }
@@ -27,9 +27,15 @@
   transition: 0.5s ease-out;
 }
 
-#flex-card-todolist-header{
+#card-header-content-div{
   display: flex;
   justify-content: space-between;
+}
+
+.card-header-title {
+  display: flex;
+  align-items: center;
+  white-space: nowrap
 }
 
 .header-card-done-button{
