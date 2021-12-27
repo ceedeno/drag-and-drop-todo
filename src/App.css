@@ -53,6 +53,10 @@
   min-height: 50px;
 }
 
+.input-field{
+  margin: 2px 0;
+}
+
 @media only screen and (min-width: 576px) {
   #lists-container {
     padding: 25px;

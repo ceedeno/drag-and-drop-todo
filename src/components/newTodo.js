@@ -9,10 +9,10 @@ function NewTodo(props) {
                 props.onNewTodo(event);
                 event.preventDefault()
             }}>
-                <Form.Group controlId="title">
+                <Form.Group controlId="title" className={"input-field"}>
                     <Form.Control required type="text" placeholder="Title"/>
                 </Form.Group>
-                <Form.Group controlId="description">
+                <Form.Group controlId="description" className={"input-field"}>
                     <Form.Control required as="textarea" placeholder="Description"/>
                 </Form.Group>
                 <div className={"new-todo-btn-div"}>
