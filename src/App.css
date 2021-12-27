@@ -54,7 +54,7 @@
 }
 
 .droppable-div{
-  min-height: 50px;
+  min-height: 30px;
 }
 
 .input-field{
@@ -89,7 +89,11 @@
 }
 
 .div-btn{
-  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  min-height: 100px;
 }
 
 .done-btn{
@@ -103,4 +107,10 @@
   justify-content: center;
   margin: 4px;
   gap: 4px;
+}
+
+.add-list-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

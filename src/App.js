@@ -27,11 +27,11 @@ function App() {
     }, [lists, setLists, setAddListClicked]);
 
     const onDragEnd = useCallback((result) => {
-        if(!result.destination){
+        if (!result.destination) {
             return;
         }
 
-        if(result.destination.droppableId === result.source.droppableId && result.destination.index === result.source.index){
+        if (result.destination.droppableId === result.source.droppableId && result.destination.index === result.source.index) {
             return;
         }
 
@@ -91,12 +91,14 @@ function App() {
                         ))
                     }
                     {!addListClicked &&
-                    <div className={"div-btn"}>
-                        <Button
-                            variant="success"
-                            onClick={() => setAddListClicked(true)}
-                        >Add List</Button>
-                    </div>}
+                        <div className={"div-btn"}>
+                            <div className={"add-list-btn"}>
+                                <Button
+                                        variant="success"
+                                        onClick={() => setAddListClicked(true)}
+                                >Add List</Button>
+                            </div>
+                        </div>}
                     {addListClicked && <NewList onNewList={handleNewList} AddListClicked={setAddListClicked}/>}
                 </DragDropContext>
             </Container>
