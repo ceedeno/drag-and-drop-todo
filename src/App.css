@@ -88,3 +88,11 @@
   visibility: hidden;
   opacity: 0;
 }
+
+.new-todo-btn-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 4px;
+  gap: 4px;
+}

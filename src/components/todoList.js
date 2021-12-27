@@ -77,7 +77,7 @@ function TodoList({onRemoveList, name, MyListId, myIndex, todos}) {
                     )}
 
                 </Droppable>
-                {addClicked && <NewTodo onNewTodo={handleNewTodo}/>}
+                {addClicked && <NewTodo onNewTodo={handleNewTodo} AddClicked={setAddClicked}/>}
             </Card.Body>
             <Card.Footer>
                 <div className={"d-flex justify-content-center"}>

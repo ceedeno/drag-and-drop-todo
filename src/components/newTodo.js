@@ -15,9 +15,14 @@ function NewTodo(props) {
                 <Form.Group controlId="description">
                     <Form.Control required as="textarea" placeholder="Description"/>
                 </Form.Group>
-                <Button variant="success" type="submit">
-                    Add To do
-                </Button>
+                <div className={"new-todo-btn-div"}>
+                    <Button variant="success" type="submit">
+                        Add To do
+                    </Button>
+                    <Button variant="outline-secondary" onClick={() => props.AddClicked(false)}>
+                        Cancel
+                    </Button>
+                </div>
             </Form>
         </div>
     )
