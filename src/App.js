@@ -97,7 +97,7 @@ function App() {
                             onClick={() => setAddListClicked(true)}
                         >Add List</Button>
                     </div>}
-                    {addListClicked && <NewList onNewList={handleNewList}/>}
+                    {addListClicked && <NewList onNewList={handleNewList} AddListClicked={setAddListClicked}/>}
                 </DragDropContext>
             </Container>
         </AppContext.Provider>
