@@ -52,13 +52,15 @@ function TodoList({onRemoveList, name, MyListId, myIndex, todos}) {
                     </button>
                 </div>
             </Card.Header>
-            <Card.Body>
+            <Card.Body id={"todo-card-body"}>
                 <Droppable droppableId={MyListId.toString()}>
+
                     {(provided) => (
                         <ListGroup
                             variant="flush"
                             ref={provided.innerRef}
                             {...provided.droppableProps}>
+                            <div className={"droppable-div"}>
                             {
                                 todos.map(({title, description, id}, index) => (<Todo
                                     onDone={() => handleDone(id)}
@@ -69,9 +71,11 @@ function TodoList({onRemoveList, name, MyListId, myIndex, todos}) {
                                     key={id}
                                 />))
                             }
+                            </div>
                             {provided.placeholder}
                         </ListGroup>
                     )}
+
                 </Droppable>
                 {addClicked && <NewTodo onNewTodo={handleNewTodo}/>}
             </Card.Body>

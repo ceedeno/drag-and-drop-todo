@@ -43,6 +43,16 @@
   justify-content: flex-end;
 }
 
+#todo-card-body{
+  max-height: 400px;
+  overflow-y: scroll;
+
+}
+
+.droppable-div{
+  min-height: 50px;
+}
+
 @media only screen and (min-width: 576px) {
   #lists-container {
     padding: 25px;
