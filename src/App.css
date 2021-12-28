@@ -39,7 +39,7 @@
 .card-header-title {
   display: flex;
   align-items: center;
-  white-space: nowrap
+  overflow: hidden;
 }
 
 .header-card-done-button{
