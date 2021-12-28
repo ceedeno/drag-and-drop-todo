@@ -45,7 +45,7 @@ function TodoList({onRemoveList, name, MyListId, myIndex, todos}) {
                 <div id={"card-header-content-div"}>
                     <div className="card-header-title font-size-lg text-capitalize font-weight-normal">
                         <FontAwesomeIcon icon={faList}/>
-                        &nbsp;{name}
+                        <strong>&nbsp;{name}</strong>
                     </div>
                     <button className={"border-0 btn-transition btn btn-outline-danger"} onClick={onRemoveList}>
                         <FontAwesomeIcon icon={faTrash}/>

@@ -80,10 +80,14 @@
 @media only screen and (max-width: 575px) {
 
   #lists-container {
+    padding: 15px;
+    border: initial;
+    background: #fff;
+    border-radius: calc(.15rem - 1px);
     display: flex;
     flex-direction: column;
     min-width: 350px;
-    margin-top: 20px;
+    margin-top: 10px;
     gap: 10px;
   }
 }
